@@ -11,8 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-.env
-.env.*
 lms_walkthrough.webm
 
 # Editor directories and files
