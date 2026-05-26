@@ -89,7 +89,7 @@ const ParentDashboard = ({ activeTab }) => {
       // 6. Fetch Attendance
       const { data: attData, error: attError } = await supabase
         .from('attendance')
-        .select('*, course:courses(*), student:users(*)');
+        .select('*, course:courses(*), student:users!student_id(*)');
       if (attError) throw attError;
       setAttendance((attData || []).filter(a => studentIds.includes(a.student_id)));
 
